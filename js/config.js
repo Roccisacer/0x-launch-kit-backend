@@ -46,7 +46,7 @@ exports.RPC_URL = _.isEmpty(process.env.RPC_URL)
     ? 'https://kovan.infura.io/v3/f215624b820f46028eb77aef44c5b400'
     : assertEnvVarType('RPC_URL', process.env.RPC_URL, EnvVarType.Url);
 // Address used when simulating transfers from the maker as part of 0x order validation
-exports.DEFAULT_TAKER_SIMULATION_ADDRESS = '0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa';
+exports.DEFAULT_TAKER_SIMULATION_ADDRESS = '0x709453D46915C562d88CEC34fA948ed7519c190f';
 // A time window after which the order is considered permanently expired
 exports.ORDER_SHADOWING_MARGIN_MS = 100 * 1000; // tslint:disable-line custom-no-magic-numbers
 // Frequency of checks for permanently expired orders
