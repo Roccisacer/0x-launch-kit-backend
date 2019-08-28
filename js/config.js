@@ -43,7 +43,7 @@ exports.TAKER_FEE_ZRX_UNIT_AMOUNT = _.isEmpty(process.env.TAKER_FEE_ZRX_UNIT_AMO
     : assertEnvVarType('TAKER_FEE_ZRX_UNIT_AMOUNT', process.env.TAKER_FEE_ZRX_UNIT_AMOUNT, EnvVarType.UnitAmount);
 // Ethereum RPC url
 exports.RPC_URL = _.isEmpty(process.env.RPC_URL)
-    ? 'https://kovan.infura.io/v3/f215624b820f46028eb77aef44c5b400'
+    ? 'https://mainnet.infura.io/v3/53859557992b4896a7ee8cc0292b7526'
     : assertEnvVarType('RPC_URL', process.env.RPC_URL, EnvVarType.Url);
 // Address used when simulating transfers from the maker as part of 0x order validation
 exports.DEFAULT_TAKER_SIMULATION_ADDRESS = '0x709453D46915C562d88CEC34fA948ed7519c190f';
