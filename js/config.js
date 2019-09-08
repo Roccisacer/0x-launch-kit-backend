@@ -32,21 +32,21 @@ exports.NETWORK_ID = _.isEmpty(process.env.NETWORK_ID)
 // The fee recipient for orders
 exports.FEE_RECIPIENT = _.isEmpty(process.env.FEE_RECIPIENT)
     ? getDefaultFeeRecipient()
-    : assertEnvVarType('FEE_RECIPIENT', process.env.FEE_RECIPIENT, EnvVarType.FeeRecipient);
+    : assertEnvVarType('0x2a87C1345024ab463ACC26417124C433b3069fdD', process.env.FEE_RECIPIENT, EnvVarType.FeeRecipient);
 // A flat fee in ZRX that should be charged to the order maker
 exports.MAKER_FEE_ZRX_UNIT_AMOUNT = _.isEmpty(process.env.MAKER_FEE_ZRX_UNIT_AMOUNT)
-    ? new _0x_js_1.BigNumber(0)
+    ? new _0x_js_1.BigNumber(1.6)
     : assertEnvVarType('MAKER_FEE_ZRX_UNIT_AMOUNT', process.env.MAKER_FEE_ZRX_UNIT_AMOUNT, EnvVarType.UnitAmount);
 // A flat fee in ZRX that should be charged to the order taker
 exports.TAKER_FEE_ZRX_UNIT_AMOUNT = _.isEmpty(process.env.TAKER_FEE_ZRX_UNIT_AMOUNT)
-    ? new _0x_js_1.BigNumber(0)
+    ? new _0x_js_1.BigNumber(1.6)
     : assertEnvVarType('TAKER_FEE_ZRX_UNIT_AMOUNT', process.env.TAKER_FEE_ZRX_UNIT_AMOUNT, EnvVarType.UnitAmount);
 // Ethereum RPC url
 exports.RPC_URL = _.isEmpty(process.env.RPC_URL)
-    ? 'https://mainnet.infura.io/v3/53859557992b4896a7ee8cc0292b7526'
+    ? 'mainnet.infura.io/v3/5858306b2e804004a036846423010ca5'
     : assertEnvVarType('RPC_URL', process.env.RPC_URL, EnvVarType.Url);
 // Address used when simulating transfers from the maker as part of 0x order validation
-exports.DEFAULT_TAKER_SIMULATION_ADDRESS = '0x709453D46915C562d88CEC34fA948ed7519c190f';
+exports.DEFAULT_TAKER_SIMULATION_ADDRESS = '0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa';
 // A time window after which the order is considered permanently expired
 exports.ORDER_SHADOWING_MARGIN_MS = 100 * 1000; // tslint:disable-line custom-no-magic-numbers
 // Frequency of checks for permanently expired orders
